@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fc;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 45px;
+    background: linear-gradient(135deg, #eef4ff, #f8faff);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hero h1 {
+    color: #1e3a8a;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #64748b;
+    font-size: 17px;
+}
+
+/* Main layout */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+section > h2 {
+    color: #1e3a8a;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Profile */
+
+.profile-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #eef4ff;
+}
+
+.profile-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+.profile-card p {
+    color: #64748b;
+}
+
+/* Registration form */
+
+form {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group > label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 7px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #fff;
+    color: #1f2937;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Radio and checkbox options */
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-top: 7px;
+}
+
+.options label {
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #2563eb;
+    width: 16px;
+    height: 16px;
+}
+
+/* Buttons */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background: #d1d5db;
+}
+
+/* Success message */
+
+.success-message {
+    display: none;
+    grid-column: 1 / -1;
+    padding: 12px 15px;
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.success-message.show {
+    display: block;
+}
+
+/* Tables */
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 7px 25px rgba(15, 23, 42, 0.07);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover td {
+    background: #f8fafc;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background: #1e3a8a;
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 45px 15px 35px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 25px 15px 45px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-actions {
+        justify-content: stretch;
+    }
+
+    button {
+        flex: 1;
+    }
+}
